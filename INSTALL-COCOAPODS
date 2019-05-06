@@ -1,0 +1,26 @@
+#!/bin/sh
+
+echo "Installing Cocoapod dependencies"
+pod install
+
+echo "Clean BoringSSL module.modulemap"
+> Pods/BoringSSL/include/openssl/module.modulemap
+
+echo "Fix the bad imports in the generated files"
+grep -rl "google/cloud/speech/v1beta1/CloudSpeech.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/cloud\/speech\/v1beta1\/CloudSpeech\.pbobjc\.h"'@'\<googleapis\/CloudSpeech\.pbobjc\.h\>'@g
+grep -rl "google/api/Annotations.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/api\/Annotations\.pbobjc\.h"'@'\<googleapis\/Annotations\.pbobjc\.h\>'@g
+grep -rl "google/longrunning/Operations.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/longrunning\/Operations\.pbobjc\.h"'@'\<googleapis\/Operations\.pbobjc\.h\>'@g
+grep -rl "google/rpc/Status.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/rpc\/Status\.pbobjc\.h"'@'\<googleapis\/Status\.pbobjc\.h\>'@g
+grep -rl "google/cloud/speech/v1/CloudSpeech.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/speech\/v1\/CloudSpeech\.pbobjc\.h\"'@'\<googleapis\/CloudSpeech\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/texttospeech/v1/CloudTts.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/texttospeech\/v1\/CloudTts\.pbobjc\.h\"'@'\<googleapis\/CloudTts\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/ImageAnnotator.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/ImageAnnotator\.pbobjc\.h\"'@'\<googleapis\/ImageAnnotator\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/Geometry.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/Geometry\.pbobjc\.h\"'@'\<googleapis\/Geometry\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/ProductSearch.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/ProductSearch\.pbobjc\.h\"'@'\<googleapis\/ProductSearch\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/TextAnnotation.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/TextAnnotation\.pbobjc\.h\"'@'\<googleapis\/TextAnnotation\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/WebDetection.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/WebDetection\.pbobjc\.h\"'@'\<googleapis\/WebDetection\.pbobjc\.h\>'@g 
+grep -rl "google/cloud/vision/v1/ProductSearchService.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/vision\/v1\/ProductSearchService\.pbobjc\.h\"'@'\<googleapis\/ProductSearchService\.pbobjc\.h\>'@g 
+grep -rl "google/type/Color.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/type\/Color\.pbobjc\.h\"'@'\<googleapis\/Color\.pbobjc\.h\>'@g 
+grep -rl "google/type/Latlng.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/type\/Latlng\.pbobjc\.h\"'@'\<googleapis\/Latlng\.pbobjc\.h\>'@g 
+
+
+
