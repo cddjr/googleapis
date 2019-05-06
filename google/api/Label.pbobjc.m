@@ -15,7 +15,7 @@
 
 #import <stdatomic.h>
 
-#import "google/api/Label.pbobjc.h"
+#import <googleapis/Label.pbobjc.h>
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push

@@ -14,8 +14,8 @@
 #endif
 
 #import <googleapis/Annotations.pbobjc.h>
-#import "google/api/HTTP.pbobjc.h"
-#import "google/protobuf/Descriptor.pbobjc.h"
+#import <googleapis/HTTP.pbobjc.h>
+#import <googleapis/Descriptor.pbobjc.h>
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push

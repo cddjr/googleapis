@@ -1,5 +1,5 @@
 #if !defined(GPB_GRPC_PROTOCOL_ONLY) || !GPB_GRPC_PROTOCOL_ONLY
-#import "google/longrunning/Operations.pbrpc.h"
+#import <googleapis/Operations.pbrpc.h>
 #import <googleapis/Operations.pbobjc.h>
 #import <ProtoRPC/ProtoRPC.h>
 #import <RxLibrary/GRXWriter+Immediate.h>

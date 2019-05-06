@@ -1,5 +1,5 @@
 #if !defined(GPB_GRPC_PROTOCOL_ONLY) || !GPB_GRPC_PROTOCOL_ONLY
-#import "google/cloud/speech/v1/CloudSpeech.pbrpc.h"
+#import <googleapis/CloudSpeech.pbrpc.h>
 #import <googleapis/CloudSpeech.pbobjc.h>
 #import <ProtoRPC/ProtoRPC.h>
 #import <RxLibrary/GRXWriter+Immediate.h>

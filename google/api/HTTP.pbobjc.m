@@ -13,7 +13,7 @@
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
 
-#import "google/api/HTTP.pbobjc.h"
+#import <googleapis/HTTP.pbobjc.h>
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push

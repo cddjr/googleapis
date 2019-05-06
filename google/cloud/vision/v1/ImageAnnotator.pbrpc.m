@@ -1,5 +1,5 @@
 #if !defined(GPB_GRPC_PROTOCOL_ONLY) || !GPB_GRPC_PROTOCOL_ONLY
-#import "google/cloud/vision/v1/ImageAnnotator.pbrpc.h"
+#import <googleapis/ImageAnnotator.pbrpc.h>
 #import <googleapis/ImageAnnotator.pbobjc.h>
 #import <ProtoRPC/ProtoRPC.h>
 #import <RxLibrary/GRXWriter+Immediate.h>

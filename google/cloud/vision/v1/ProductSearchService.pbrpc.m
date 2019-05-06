@@ -1,5 +1,5 @@
 #if !defined(GPB_GRPC_PROTOCOL_ONLY) || !GPB_GRPC_PROTOCOL_ONLY
-#import "google/cloud/vision/v1/ProductSearchService.pbrpc.h"
+#import <googleapis/ProductSearchService.pbrpc.h>
 #import <googleapis/ProductSearchService.pbobjc.h>
 #import <ProtoRPC/ProtoRPC.h>
 #import <RxLibrary/GRXWriter+Immediate.h>
